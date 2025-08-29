@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Register</title>
+		<link rel="stylesheet" href="CSS/bootstrap.min.css" />
+		<style>
+			body {
+				background-color: #f8f9fa;
+				font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+			}
+			.register-container {
+				max-width: 800px;
+				border-radius: 15px;
+				box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+				overflow: hidden;
+			}
+			.register-header {
+				background: linear-gradient(135deg, #0062cc, #0095ff);
+				color: white;
+				padding: 25px;
+				text-align: center;
+			}
+			.register-form {
+				padding: 30px;
+				background-color: white;
+			}
+			.form-icon {
+				position: relative;
+			}
+			.form-icon input {
+				padding-left: 40px;
+			}
+			.form-icon i {
+				position: absolute;
+				left: 15px;
+				top: 42px;
+				color: #6c757d;
+			}
+			.password-requirements {
+				font-size: 0.8rem;
+				color: #6c757d;
+			}
+			.btn-register {
+				background: linear-gradient(135deg, #0062cc, #0095ff);
+				border: none;
+				padding: 10px 0;
+				font-weight: 600;
+			}
+			.btn-register:hover {
+				background: linear-gradient(135deg, #0052b3, #0085e8);
+			}
+			.login-redirect {
+				text-align: center;
+				margin-top: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container py-5">
+			<div class="register-container mx-auto">
+				<div class="register-header">
+					<h2>
+						<i class="bi bi-person-plus-fill me-2"></i>Create Your Account
+					</h2>
+					<p class="mb-0">Join our community and start your journey</p>
+				</div>
+
+				<form class="register-form needs-validation" novalidate>
+					<div class="row">
+						<div class="col-md-6 mb-3">
+							<label for="fullName" class="form-label">Full Name</label>
+
+							<input
+								type="text"
+								class="form-control"
+								id="fullName"
+								value="Abdelrahman Salah"
+								required
+							/>
+							<div class="valid-feedback">Looks good!</div>
+							<div class="invalid-feedback">Please provide your full name.</div>
+						</div>
+
+						<div class="col-md-6 mb-3">
+							<label for="email" class="form-label">Email</label>
+								<input type="email" class="form-control" id="email" required />
+							<div class="invalid-feedback">Please provide a valid email.</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-6 mb-3">
+							<label for="phone" class="form-label">Phone Number</label>
+								<input type="tel" class="form-control" id="phone" required />
+							<div class="invalid-feedback">
+								Please provide a valid phone number.
+							</div>
+						</div>
+
+						<div class="col-md-6 mb-3">
+							<label for="dob" class="form-label">Date of Birth</label>
+								<input type="date" class="form-control" id="dob" required />
+							<div class="invalid-feedback">
+								Please select your date of birth.
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-6 mb-3">
+							<label for="password" class="form-label">Password</label>
+								<input
+									type="password"
+									class="form-control"
+									id="password"
+									minlength="8"
+									required
+								/>
+							<div class="password-requirements">
+								Must be at least 8 characters with uppercase, lowercase, and
+								number
+							</div>
+							<div class="invalid-feedback">
+								Please provide a valid password.
+							</div>
+						</div>
+
+						<div class="col-md-6 mb-3">
+							<label for="confirmPassword" class="form-label"
+								>Confirm Password</label
+							>
+								<input
+									type="password"
+									class="form-control"
+									id="confirmPassword"
+									minlength="8"
+									required
+								/>
+							<div class="invalid-feedback">Passwords must match.</div>
+						</div>
+					</div>
+					<div class="mb-3">
+						<label class="form-label">Gender</label>
+						<div>
+							<div class="form-check form-check-inline">
+								<input
+									class="form-check-input"
+									type="radio"
+									name="gender"
+									id="male"
+									value="male"
+									required
+								/>
+								<label class="form-check-label" for="male">Male</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input
+									class="form-check-input"
+									type="radio"
+									name="gender"
+									id="female"
+									value="female"
+								/>
+								<label class="form-check-label" for="female">Female</label>
+							</div>
+						</div>
+						<div class="invalid-feedback">Please select your gender.</div>
+					</div>
+
+					<div class="mb-3">
+						<div class="form-check">
+							<input
+								class="form-check-input"
+								type="checkbox"
+								id="terms"
+								required
+							/>
+							<label class="form-check-label" for="terms">
+								I agree to the <a href="#">terms and conditions</a>
+							</label>
+							<div class="invalid-feedback">
+								You must agree before submitting.
+							</div>
+						</div>
+					</div>
+
+					<button type="submit" class="btn btn-primary w-100 btn-register">
+						Register
+					</button>
+
+					<div class="login-redirect">
+						<p>
+							Already have an account? <a href="#" id="loginLink">Login here</a>
+						</p>
+					</div>
+				</form>
+			</div>
+		</div>
+		<script src="JS/bootstrap.bundle.min.js"></script>
+		<script src="JS/script.js"></script>
+	</body>
+</html>
